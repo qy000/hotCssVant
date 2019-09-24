@@ -1,0 +1,174 @@
+@import "./colorVariables.less";
+
+header,
+main,
+footer,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: @white;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /***** Vant 样式修改 *****/
+
+  // 通告栏
+  .van-notice-bar {
+    color: @base;
+    background-color: @white;
+  }
+
+  // 底部tabbar
+  .van-tabbar {
+    height: 60px;
+
+    .van-tabbar-item {
+      margin-bottom: 5px;
+    }
+
+    .van-tabbar-item--active {
+      color: @base;
+    }
+
+    .van-tabbar-item__icon img {
+      height: 28px;
+      width: 30px;
+    }
+  }
+
+  // primary按钮
+  .van-button--primary {
+    background: @base;
+    border: 1px solid @base;
+  }
+
+  // 导航栏
+  .van-nav-bar {
+    background: @base;
+
+    .van-icon,
+    .van-nav-bar__text,
+    .van-nav-bar__title {
+      color: @white;
+    }
+  }
+
+  // picker标题字体颜色
+  .van-picker__cancel,
+  .van-picker__confirm {
+    color: @base;
+  }
+
+  // 单选框、复选框
+  .van-checkbox__icon--checked .van-icon,
+  .van-radio__icon--checked .van-icon {
+    border-color: @base;
+    background: @base;
+  }
+}
+
+// 输入框label宽度
+.van-field__label {
+  max-width: 120px;
+}
+
+// 表单公共
+.form {
+  font-size: 14px;
+
+  .title {
+    padding: 10px 15px;
+  }
+
+  .van-icon-photograph {
+    font-size: 32px;
+  }
+
+}
+
+// 图片上传(单图上传)
+.upload-box {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+
+  .van-icon-plus {
+    font-size: 32px;
+    color: @font-grey;
+  }
+
+  .upload-icon {
+    width: 80px;
+    height: 80px;
+    padding-top: 22px;
+    text-align: center;
+    border: 1px dashed @font-grey;
+    border-radius: 6px;
+  }
+
+  .upload-img {
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+  }
+}
+
+// 图片上传(多图上传)
+.upload {
+  padding: 0 15px;
+
+  // 展示图片超出换行
+  .van-row--flex {
+    flex-wrap: wrap;
+  }
+
+  .list {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 6px 6px 0;
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: @font-grey;
+  }
+}
+
+// * 提示
+.required {
+  margin-left: 7px;
+  color: @red;
+}
+
+// 底部按钮
+.footer-btn {
+  padding: 20px 15px;
+}
